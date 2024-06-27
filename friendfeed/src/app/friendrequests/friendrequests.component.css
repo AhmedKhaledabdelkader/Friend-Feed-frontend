@@ -1,0 +1,126 @@
+.main{
+
+  
+
+    position: relative;
+
+    top: 70px;
+
+    left: 500px;
+
+  
+
+
+}
+
+.shadowTitle{
+
+    text-shadow: 1px 1px 2px black;
+
+    color: blue;
+}
+
+.request{
+
+
+    width: 700px;
+
+    height: 150px;
+
+
+    background-color:#f4f4f4  ;
+    
+
+
+
+}
+
+
+
+.profile-picture {
+  width: 80px;  /* You can adjust the size as needed */
+  height: 80px; /* You can adjust the size as needed */
+  border-radius: 50%;
+  object-fit: cover;  /* Ensures the image covers the entire area without distortion */
+  border: 2px solid #ccc;  /* Optional: Adds a border around the image */
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.friendRequestText{
+
+
+    font-size: 18px;
+
+    font-weight:700 ;
+
+
+
+
+
+}
+
+.positionButton{
+
+
+    position: relative !important;
+
+    left: 370px !important;
+
+    top: -30px !important;
+
+
+
+}
+
+.requestButton{
+
+
+    width: 150px;
+
+    font-size: 18px;
+
+
+}
+
+.textMutal{
+
+    font-size: 15px;
+
+    margin-left: 120px;
+
+    position: relative;
+
+    top: -30px;
+
+}
+
+.bgAccept{
+
+background-color:#28a74639 !important;
+
+}
+
+.bgReject{
+
+    background-color: pink !important;
+    
+    }
+
+
+
+.err-msg{
+
+
+font-size: 25px;
+
+font-weight: 700;
+
+position: relative;
+
+left: 200px;
+
+top: 50px;
+
+
+    }

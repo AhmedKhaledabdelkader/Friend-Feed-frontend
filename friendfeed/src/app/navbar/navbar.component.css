@@ -1,0 +1,58 @@
+
+
+.navbarPosition{
+
+
+    position: fixed;
+
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 233455;
+
+   
+
+
+}
+
+.linkFont{
+
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+
+}
+
+.fontName{
+
+
+    
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+.navbarHeader{
+
+
+    font-size: 25px;
+
+
+}
+.linkFont:hover{
+
+    color: gold !important;
+
+    cursor: pointer;
+
+
+}
+
+.textLink{
+
+color: gold !important;
+
+}

@@ -1,0 +1,188 @@
+
+
+
+
+
+<div class="main">
+
+
+
+    <!-- Sign up form -->
+    <section class="signup">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Sign up</h2>
+                    <form  class="register-form" id="register-form" [formGroup]="formData" (submit)="makeSignup(imageFile)"  >
+                        <div class="form-group">
+                            <label for="name" class=""><i class="fa-solid fa-user"></i></label>
+                            <input type="text" name="name" id="name" placeholder="Your username" formControlName="username"/>
+
+
+                           
+
+                         <div *ngIf="formData.get('username')?.errors &&formData.get('username')?.touched">
+
+
+                            <div  *ngIf="formData.get('username')?.getError('minlength')" >
+                                <p class="usernameValid">at least 3 character</p>
+                            </div>
+                            <div *ngIf="formData.get('username')?.getError('maxlength')">
+                            <p class="usernameValid">maxmium 25 character</p>
+                            </div>
+                            <div  *ngIf="formData.get('username')?.getError('required')">
+                            <p class="usernameValid">username is required</p>
+                            </div>
+                            
+                            
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                            <input type="email" name="email" id="email"  placeholder="Your Email" formControlName="email"/>
+
+
+
+                            <div *ngIf="formData.get('email')?.errors &&formData.get('email')?.touched">
+
+                                <div *ngIf="formData.get('email')?.getError('email')" >
+                                    <p class="usernameValid" >email is not valid</p>
+                                </div>
+                                
+                                <div  *ngIf="formData.get('email')?.getError('required')">
+                                    <p class="usernameValid" >email is required</p>
+                                </div>
+                                    
+                                    
+                                    
+                                    </div>
+                                
+
+
+
+
+
+
+
+                        </div>
+                        <div class="form-group">
+                            <label for="pass"><i class="fa-solid fa-lock"></i></label>
+                            <input type="password" name="pass" id="pass" placeholder="Password" formControlName="password"/>
+
+
+                            <div *ngIf="formData.get('password')?.errors &&formData.get('password')?.touched">
+
+
+                                <div *ngIf="formData.get('password')?.getError('pattern')">
+                              
+                                <p class="usernameValid" >Password  at least 8 characters long and contain at least one lowercase letter, one uppercase letter, and one digit </p>
+                            </div>
+                            <div *ngIf="formData.get('password')?.getError('required')" >
+                                <p  class="usernameValid" >password is required</p>
+                                
+                            </div>
+                                
+                                </div>
+
+
+
+
+
+                        </div>
+                        <div class="form-group">
+                            <label for="imageFile"><i class="fa-solid fa-file"></i></label>
+                            <input type="file"  #imageFile name="imagefile" id="imageFile" placeholder="profileImage" formControlName="userImage"/>
+
+                            <div *ngIf="formData.get('userImage')?.errors &&formData.get('userImage')?.touched">
+
+
+                                <div *ngIf="formData.get('userImage')?.getError('required')">
+                                <p class="usernameValid">profile image is required</p>
+                            </div>
+                            </div>
+
+
+                        </div>
+                        <div class="form-group">
+                            
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>if you don't have an account ?  <a href="#" class="signinLink">signin</a></label>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signup" id="signup" [disabled]="formData.invalid"   class="form-submit bg-primary" value="Register"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-image">
+                    <figure><img src="../../assets/office-desk-5954672_1280.jpg" class="imageSize" alt="sing up image"></figure>
+                    <p class="titleAboveImage">Welcome to FriendFeed <br><br><span class="signuptext">please SignUp</span></p>
+                </div>
+            </div>
+
+
+            <div class="alert alert-danger marginAlert" *ngIf="errorMessage.length>0" role="alert">
+            Signup failed {{errorMessage}}
+              </div>
+
+        </div>
+
+      
+
+    </section>
+
+
+   
+
+    
+    <!-- Sing in  Form -->
+   <!-- <section class="sign-in">
+        <div class="container">
+            <div class="signin-content">
+                <div class="signin-image">
+                    <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
+                    <a href="#" class="signup-image-link">Create an account</a>
+                </div>
+
+                <div class="signin-form">
+                    <h2 class="form-title">Sign up</h2>
+                    <form method="POST" class="register-form" id="login-form">
+                        <div class="form-group">
+                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="your_name" id="your_name" placeholder="Your Name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                            <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                        </div>
+                    </form>
+                    <div class="social-login">
+                        <span class="social-label">Or login with</span>
+                        <ul class="socials">
+                            <li><a href=""><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                            <li><a href=""><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                            <li><a href=""><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+</div>
+
+<!-- JS -->

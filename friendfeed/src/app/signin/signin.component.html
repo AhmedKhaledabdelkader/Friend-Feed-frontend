@@ -1,0 +1,80 @@
+
+<section class="sign-in marginBorder">
+    <div class="container">
+        <div class="signin-content">
+            <div class="signin-image">
+                <figure><img src="../../assets/office-desk-5954672_1280.jpg" alt="sign in  image"></figure>
+                <p class="signup-image-link font1"> if you don't have an account?</p>
+                <a  class="signup-image-link createLink" (click)="goToSignUp()"  >create an account</a>
+            </div>
+
+            <div class="signin-form">
+                <h2 class="form-title">Sign in</h2>
+                <form  class="register-form" id="login-form" [formGroup]="formData" (submit)="makeSignin(formData)">
+                    <div class="form-group">
+                        <label for="your_name"><i class="fa-solid fa-envelope"></i></label>
+                        <input type="text" name="your_name" id="your_name" placeholder="Your Email" formControlName="email"/>
+
+
+                        
+                        <div *ngIf="formData.get('email')?.errors &&formData.get('email')?.touched">
+
+                            <div *ngIf="formData.get('email')?.getError('email')" >
+                                <p class="usernameValid" >email is not valid</p>
+                            </div>
+                            
+                            <div  *ngIf="formData.get('email')?.getError('required')">
+                                <p class="usernameValid" >email is required</p>
+                            </div>
+                                
+                                
+                                
+                                </div>
+
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="your_pass"><i class="fa-solid fa-lock"></i></label>
+                        <input type="password" name="your_pass" id="your_pass" placeholder="Password" formControlName="password"/>
+
+
+
+
+                        <div *ngIf="formData.get('password')?.errors &&formData.get('password')?.touched">
+
+
+                            <div *ngIf="formData.get('password')?.getError('pattern')">
+                          
+                            <p class="usernameValid" >Password  at least 8 characters long and contain at least one lowercase letter, one uppercase letter, and one digit </p>
+                        </div>
+                        <div *ngIf="formData.get('password')?.getError('required')" >
+                            <p  class="usernameValid" >password is required</p>
+                            
+                        </div>
+                            
+                            </div>
+
+
+
+
+
+
+
+                    </div>
+                    
+                    <div class="form-group form-button">
+                        <input type="submit" name="signin"  [disabled]="formData.invalid" id="signin" class="form-submit" value="Log in"/>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+
+        <div class="alert alert-danger marginAlert" *ngIf="errorMessage.length>0" role="alert">
+            Signin failed {{errorMessage}}
+              </div>
+
+    </div>
+</section>
+

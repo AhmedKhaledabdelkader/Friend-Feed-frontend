@@ -1,0 +1,41 @@
+
+
+<div class="main">
+
+<div id="wrapper" class="postionBorder ">
+    <div id="dialog" class="rounded-5">
+      
+      <h3>Please enter the 6-digit verification code we sent via email address:</h3>
+     
+      <div id="form">
+        <form (submit)="verifyEmail()">
+        <div class="input-group">
+          <input type="text" maxlength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (input)="onInputChange($event, 0)" />
+          <input type="text" maxlength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (input)="onInputChange($event, 1)" />
+          <input type="text" maxlength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (input)="onInputChange($event, 2)" />
+          <input type="text" maxlength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (input)="onInputChange($event, 3)" />
+          <input type="text" maxlength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (input)="onInputChange($event, 4)" />
+          <input type="text" maxlength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (input)="onInputChange($event, 5)" />
+        </div>
+        <button class="btn btn-primary btn-embossed" type="submit" >Verify</button>
+        </form>
+      </div>
+      <div>
+        if you you have an account?<br />
+        <a href="#">go to Signin</a><br />
+        
+      </div>
+
+      <br>
+
+      <div class="alert alert-danger" role="alert" *ngIf="verificationCodeError.length>0">
+
+        {{verificationCodeError}}
+       
+      </div>
+      
+     
+    <!---  <img src="http://jira.moovooz.com/secure/attachment/10424/VmVyaWZpY2F0aW9uLnN2Zw==" alt="test" />-->
+    </div>
+  </div>
+  

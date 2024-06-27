@@ -1,0 +1,67 @@
+
+<div class="post" *ngFor="let post of posts" #postElement>
+    <div class="post-header">
+        <img [src]="post.postBy.userImage" (click)="goToUserPosts(post.postBy._id)" alt="Profile Picture" class="profile-pic cursor">
+        <div class="user-info">
+            <span class="user-name cursor" (click)="goToUserPosts(post.postBy._id)">{{post.postBy.username}}</span>
+            <span class="post-time">{{post.createdAt}}</span>
+        </div>
+    </div>
+    <div class="post-content">
+        <p>{{post.postDesc}}</p>
+        <img [src]="post.postImage" alt="Post Content" class="post-image">
+    </div>
+
+    <div class="likeAndComment">
+        <div>
+            <p>{{post.likeCount.count}} likes</p>
+        </div>
+        <div>
+            <p>{{post.comments.length}} comments</p>
+        </div>
+    </div>
+
+    <div class="line"></div>
+    <div class="post-footer">
+        <div class="actions">
+            <button type="submit" (click)="likePosts(post._id)" [ngClass]="{'likeColor': post.isLike}">
+                <i class="fa-solid fa-thumbs-up"></i>
+             <!--- <audio autoplay *ngIf="post.isLike">
+                    <source src="../../assets/facebook_likes.mp3" type="audio/mpeg">
+                </audio>-->
+                Like
+            </button>
+            <button (click)="toggleComments(post)"><i class="fa-solid fa-comment"></i> comment</button>
+        </div>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="comment-section" *ngIf="post.showComments" #commentSection>
+        <button class="close-button" (click)="closeComments(post)">X</button>
+        <div class="comments-content">
+            <div class="comment" *ngFor="let comment of post.comments">
+                <div class="comment-header">
+                    <img [src]="comment.commentBy.userImage" alt="User Image" class="comment-profile-pic">
+                    <div class="comment-info">
+                        <span class="comment-user-name">{{comment.commentBy.username}}</span>
+                        <span class="comment-time">{{comment.createdAt}}</span>
+                    </div>
+                </div>
+                <p class="comment-text commentPadding">{{comment.comment}}</p>
+            </div>
+
+
+               <br>
+                <br>
+                <br>
+
+            <div class="add-comment">
+                
+                <input [(ngModel)]="commentInput" placeholder="Add a comment..." />
+                <button (click)="addComment(post._id)">Post</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>

@@ -1,0 +1,23 @@
+
+<div class="main">
+  <br>
+  <h2 class="shadowTitle">Friend Requests</h2>
+  <br><br>
+
+  <p class="err-msg" *ngIf="errMsg.length>0">{{errMsg}}</p>
+
+  <div class="request rounded-4 mb-4" *ngFor="let request of requests" 
+       [ngClass]="{'bgAccept': checkAccept[request._id], 'bgReject': checkReject[request._id]}">
+    <img [src]="request.senderUser.userImage" alt="Profile Picture" class="profile-picture">
+    <p class="friendRequestText d-inline ms-3 mt-2">
+      {{ request.senderUser.username }}<br>
+      <span class="text-secondary textMutal">{{ request.mutalFriends }} mutual friends</span>
+    </p>
+    <div class="positionButton" *ngIf="checkButtons[request._id]">
+      <button class="btn btn-primary requestButton" type="submit" 
+              (click)="checkRequest(request._id, 'accept')">confirm</button>
+      <button class="btn btn-danger ms-3 requestButton" type="submit" 
+              (click)="checkRequest(request._id, 'reject')">reject</button>
+    </div>
+  </div>
+</div>

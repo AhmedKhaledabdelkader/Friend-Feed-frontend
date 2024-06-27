@@ -1,0 +1,40 @@
+
+
+<nav class="navbar navbar-expand-lg  navbarPosition bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white navbarHeader" ><span class="text-warning"><i class="fa-solid fa-envelopes-bulk"></i></span>FriendFeed</a>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
+          <li class="nav-item" *ngIf="isLogin">
+            <a class="nav-link active text-white linkFont" aria-current="page" routerLink="home" routerLinkActive="textLink" >All Feeds</a>
+          </li>
+        
+          
+          
+        </ul>
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white">
+
+            <li class="nav-item" *ngIf="!isLogin">
+                <a class="nav-link active text-white linkFont" aria-current="page" routerLink="signin" routerLinkActive="textLink">Signin</a>
+              </li>
+
+
+            <li class="nav-item" *ngIf="!isLogin">
+              <a class="nav-link active text-white linkFont" aria-current="page" routerLink="register" routerLinkActive="textLink">Register</a>
+            </li>
+            
+          
+            <li class="nav-item" *ngIf="isLogin">
+                <a class="nav-link active text-white linkFont" (click)="logOut()" aria-current="page" routerLinkActive="textLink" >Signout</a>
+              </li>
+            
+              
+            
+          </ul>
+        
+      </div>
+    </div>
+  </nav>
+

@@ -1,0 +1,101 @@
+#wrapper {
+    font-family: Lato;
+    font-size: 1.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    color: #333;
+  }
+
+  .main{
+
+    background-color:#faf8f8 !important ;
+    height: 700px !important;
+  }
+
+  /**/
+  #dialog {
+    border: solid 1px #ccc;
+    margin: 10px auto;
+    padding: 20px 30px;
+    display: inline-block;
+    box-shadow: 0 0 4px #ccc;
+    background-color:white ;
+    overflow: hidden;
+    position: relative;
+    max-width: 450px;
+  }
+  
+  h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    line-height: 1.25;
+  }
+  
+  span {
+    font-size: 90%;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .input-group input {
+    width: 30px; /* Adjust width as needed */
+    margin: 0 5px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    border: solid 1px #ccc;
+    box-shadow: 0 0 5px #ccc inset;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    border-radius: 3px;
+  }
+  
+  .input-group input:focus {
+    border-color:blue;
+    box-shadow: 0 0 5px blue inset;
+  }
+  
+  .input-group input::selection {
+    background: transparent;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: blue;
+    border: none;
+    text-transform: uppercase;
+  }
+  
+  button.close {
+    border: solid 2px;
+    border-radius: 30px;
+    line-height: 19px;
+    font-size: 120%;
+    width: 22px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+  
+  div {
+    position: relative;
+    z-index: 1;
+  }
+  
+  img {
+    position: absolute;
+    bottom: -70px;
+    right: -63px;
+  }
+  
+  .postionBorder{
+
+    position: relative;
+
+    top: 150px;
+  }

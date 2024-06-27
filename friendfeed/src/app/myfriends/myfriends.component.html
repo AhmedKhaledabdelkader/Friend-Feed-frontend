@@ -1,0 +1,29 @@
+
+
+    <div class="sidebar" *ngIf="isLogin" >
+        <div class="paddingDiv">
+
+
+            <h4 class="shadowTitle">My Friends</h4>
+
+            <br>
+
+            <input type="text" placeholder="search your friend..." class="form-control" [(ngModel)]="searchFriendName"/>
+
+            <br>
+
+            <p *ngIf="errMsg.length>0" class="err-msg">{{errMsg}}</p>
+
+        <div class="friend" *ngFor="let friend of friends|searchfriend:searchFriendName">
+            <img [src]="friend.userImage"  [routerLink]="['/userposts', friend._id]" alt="Friend 1" class="friend-img cursor">
+            <p class="friend-name cursor"  [routerLink]="['/userposts', friend._id]">{{friend.username}}</p>
+        </div>
+
+        <br>
+        <br>
+
+        
+        </div>
+        <!-- Add more friends as needed -->
+    </div>
+   

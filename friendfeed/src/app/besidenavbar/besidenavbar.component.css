@@ -1,0 +1,123 @@
+
+
+.main{
+
+
+width: 400px;
+
+background-color: #f4f4f4;
+
+position: fixed;
+
+top: 0px;
+
+bottom: 0px;
+
+left: 0px;
+
+/*overflow-x: auto; 
+overflow-y: scroll; */
+
+
+
+
+}
+
+.insideMain{
+position: relative;
+
+top: 70px;
+
+
+}
+
+h2{
+
+    text-shadow: 1px 1px 2px black;
+
+}
+
+.elementList{
+
+
+  /*  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;*/
+
+
+    height: 80px;
+
+    background-color:#f4f4f4 !important;
+
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    color: black;
+
+    
+
+
+
+}
+
+.elementList:hover{
+
+
+background-color:#f4f4f4 !important ;
+
+transition-duration: 1ms;
+
+
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.link{
+
+
+    text-decoration: none;
+
+    
+
+}
+
+.active1{
+
+background-color: white !important;
+
+}
+
+.profile{
+
+cursor: pointer;
+
+}
+
+
+.iconColor{
+
+color: blue;
+
+}

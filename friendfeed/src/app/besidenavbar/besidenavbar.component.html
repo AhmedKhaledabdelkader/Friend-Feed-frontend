@@ -1,0 +1,36 @@
+
+
+<div class="main" *ngIf="isLogin">
+<br>
+
+    <div class="insideMain">
+   
+    <div class="post-header ms-4">
+     <img [src]="userImage"  alt="Profile Picture" class="profile-pic profile" (click)="goToMyPosts()">
+        <div class="user-info">
+        <span class="user-name profile " (click)="goToMyPosts()">{{username}}</span>
+            
+        </div>
+    </div>
+
+
+    <br>
+    
+
+    <ul class="list-group">
+        <li class="list-group-item bg-transparent elementList" routerLink="/myposts" routerLinkActive="active1"><i class="far fa-newspaper iconColor"></i>
+
+            My posts</li>
+        <li class="list-group-item bg-transparent elementList" routerLink="/requests" routerLinkActive="active1"><i class="fa-solid fa-bell iconColor"></i> Friend Requests</li>
+        <li class="list-group-item bg-transparent elementList" routerLink="/addfriends" routerLinkActive="active1"><i class="fas fa-user-friends iconColor"></i>
+            Add Friends</li>
+        <li class="list-group-item bg-transparent elementList" routerLink="/friendsposts" routerLinkActive="active1"><i class="far fa-newspaper iconColor"></i> Friends Posts</li>
+
+        
+      </ul>
+
+
+
+
+</div>
+</div>

@@ -1,0 +1,79 @@
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+/*bottom: 0px;*/
+    right: 0px;
+
+    width: 250px;
+    height: 100%;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ccc;
+    overflow-y: auto; /* Allows scrolling if the content overflows */
+    padding: 10px;
+}
+
+.friend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.friend-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.friend-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.content {
+    margin-left: 260px; /* Adjust based on the width of the sidebar */
+    padding: 20px;
+}
+
+.paddingDiv{
+
+
+    padding-top: 80px;
+
+}
+
+.myfriendFont{
+
+
+    text-shadow: 1px 1px 2px white;
+
+}
+
+.cursor{
+
+    cursor: pointer;
+}
+
+.err-msg{
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.shadowTitle{
+
+    text-shadow: 1px 1px 2px black;
+
+    color: blue;
+}

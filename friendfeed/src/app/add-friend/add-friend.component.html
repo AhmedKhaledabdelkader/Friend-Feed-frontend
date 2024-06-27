@@ -1,0 +1,16 @@
+<div class="main">
+  <br>
+  <h2 class="shadowTitle">Add Friends</h2>
+  <br>
+  <br>
+  <div class="request rounded-4 mb-4" *ngFor="let request of addingRequests" [ngClass]="{'checkBg': isDivSelected(request.user._id)}">
+    <img [src]="request.user.userImage" alt="Profile Picture" class="profile-picture">
+    <p class="friendRequestText d-inline ms-3 mt-2">
+      {{request.user.username}}<br>
+      <span class="text-secondary textMutal">{{request.mutalCount}} mutual friends</span>
+    </p>
+    <div class="positionButton">
+      <button class="btn btn-primary requestButton" *ngIf="isButtonVisible(request.user._id)" type="submit" (click)="addFriend(request.user._id)">Add Friend</button>
+    </div>
+  </div>
+</div>

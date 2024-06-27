@@ -1,0 +1,354 @@
+
+
+
+
+.main{
+
+  
+
+    position: relative;
+
+    top: 70px;
+
+    left: 500px;
+
+  
+
+
+}
+
+.imageSize{
+
+width: 700px;
+
+height: 400px;
+
+
+}
+
+
+.profile-pic1 {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    border-radius: 50%; /* Make the image appear as a circle */
+    object-fit: cover; /* Maintain the aspect ratio of the image */
+    
+  }
+
+
+  .profile{
+
+    display: block;
+    position: relative;
+    top: -90px;
+    left: 20px;
+
+  }
+
+  .profileName{
+
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+   position: relative;
+
+   left: 130px;
+
+   top: -20px;
+
+
+}
+
+.addPostButton{
+
+width: 500px;
+
+margin-left: 100px;
+
+
+}
+
+ 
+.addPostForm {
+  width: 400px;
+  height: 300px;
+  background-color: #f4f4f4;
+  position: relative;
+  left: 150px;
+  transition: all 1.5s ease; /* This will apply a 0.3 second transition to all properties */
+}
+
+.postInput{
+
+
+  width: 380px;
+
+  margin-left: 10px;
+
+}
+.postButton{
+
+
+
+  width: 70px;
+
+}
+
+
+.usernameValid{
+
+
+  color: red;
+
+  font-size: 14px;
+
+  padding-left: 20px;
+
+
+
+}
+
+
+
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: #999;
+}
+
+.displayForm{
+
+display: block !important;
+
+}
+
+.displayForm2{
+
+  display: none;
+  
+  }
+
+  /*..........*/
+
+  .post {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+    left: 80px;
+    /*top: 70px;*/
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.post-time {
+    color: #666;
+    font-size: 12px;
+}
+
+.post-content {
+    margin: 20px 0;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.reactions {
+    font-size: 24px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    color: rgba(128, 128, 128, 0.953);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.likeColor {
+    color: blue !important;
+}
+
+.line {
+    width: auto;
+    height: 2px;
+    background-color: #6666662e;
+    position: relative;
+    top: 30px;
+}
+
+.likeAndComment {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 10;
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comments-content {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.comment {
+    margin-bottom: 10px;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+}
+
+.comment-profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-user-name {
+    font-weight: bold;
+}
+
+.comment-time {
+    color: #666;
+    font-size: 12px;
+}
+
+.comment-text {
+    margin: 5px 0;
+}
+
+.add-comment {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.add-comment input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-comment button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-comment button:hover {
+    background-color: #0056b3;
+}
+
+.commentPadding {
+    padding-left: 40px;
+}
+
+.line2 {
+    width: auto;
+    height: 2px;
+    background-color: #6666662e;
+    position: relative;
+    top: 5px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+.deletePost{
+
+cursor: pointer;
+
+color: blue;
+
+
+
+}
+
+.err-msg{
+
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    margin-left: 150px;
+
+}
